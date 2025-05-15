@@ -1,521 +1,71 @@
-# 100 Fortgeschrittene Prompting-Techniken für Sprachmodelle
-
-## A. Grundlegende Strukturierungstechniken
-
-1. Chain-of-Thought (CoT) Prompting
-   - Anleitung des Modells zum schrittweisen Denken
-   - Explizite Dokumentation der Gedankengänge
-   - Förderung logischer Schlussfolgerungen
-
-2. Zero-Shot Chain-of-Thought
-   - Hinzufügen von "Lass uns das Schritt für Schritt durchgehen"
-   - Ermöglicht Reasoning ohne Beispiele
-   - Verbessert die Qualität der Antworten
-
-3. Few-Shot Prompting
-   - Bereitstellung von 2-3 Beispielen im gewünschten Format
-   - Demonstration des erwarteten Outputs
-   - Konsistente Formatierung der Beispiele
-
-4. Tree of Thoughts (ToT)
-   - Verzweigung in mehrere Gedankenpfade
-   - Evaluation verschiedener Lösungsansätze
-   - Auswahl des optimalen Pfads
-
-5. Reflexives Prompting
-   - Selbstevaluation der Antworten
-   - Iterative Verbesserung
-   - Kritische Überprüfung
-
-## B. Kontextoptimierung
-
-6. Kontextfenster-Management
-   - Priorisierung wichtiger Informationen
-   - Strukturierte Informationsanordnung
-   - Vermeidung von Kontextverlust
-
-7. Rollenbasiertes Prompting
-   - Definition spezifischer Expertenrollen
-   - Nutzung von Fachexpertise
-   - Konsistente Perspektive
-
-8. Meta-Prompting
-   - Prompts über Prompts
-   - Optimierung der Promptstruktur
-   - Systematische Verbesserung
-
-9. Temperatur-Steuerung
-   - Anpassung der Kreativität
-   - Balancierung von Präzision und Innovation
-   - Situationsabhängige Einstellung
-
-10. Kontextuelle Anreicherung
-    - Hinzufügen relevanter Hintergrundinformationen
-    - Domänenspezifisches Wissen
-    - Verbesserung der Antwortqualität
-
-## C. Formatierungstechniken
-
-11. XML-Strukturierung
-    - Klare Datenorganisation
-    - Maschinenlesbare Ausgaben
-    - Konsistente Formatierung
-
-12. JSON-Template Prompting
-    - Strukturierte Datenanforderung
-    - Validierbare Ausgaben
-    - Standardisierte Formate
-
-13. Markdown-Formatierung
-    - Verbesserte Lesbarkeit
-    - Hierarchische Strukturierung
-    - Konsistente Darstellung
-
-14. Tabellarische Strukturierung
-    - Übersichtliche Datenanordnung
-    - Vergleichbarkeit
-    - Klare Kategorisierung
-
-15. Bullet-Point Systematik
-    - Prägnante Auflistung
-    - Klare Hierarchie
-    - Schnelle Erfassbarkeit
-
-## D. Logische Optimierung
-
-16. Constraint-Based Prompting
-    - Definition klarer Rahmenbedingungen
-    - Regelbasierte Einschränkungen
-    - Zielgerichtete Ausgaben
-
-17. Adversarial Prompting
-    - Identifikation von Schwachstellen
-    - Verbesserung der Robustheit
-    - Systematische Herausforderung
-
-18. Conditional Logic Chains
-    - Wenn-Dann-Beziehungen
-    - Verzweigte Entscheidungspfade
-    - Situationsabhängige Antworten
-
-19. Recursive Refinement
-    - Iterative Verbesserung
-    - Schrittweise Optimierung
-    - Qualitätssteigerung
-
-20. Error Checking Protocols
-    - Systematische Fehlerprüfung
-    - Validierungsschritte
-    - Qualitätssicherung
-
-## E. Spezifische Anwendungstechniken
-
-21. Code Generation Protocol
-    - Strukturierte Codeerzeugung
-    - Dokumentationsanforderungen
-    - Testfallintegration
-
-22. Data Analysis Framework
-    - Systematische Datenanalyse
-    - Statistische Methoden
-    - Visualisierungsanforderungen
-
-23. Creative Writing Methodology
-    - Storytelling-Strukturen
-    - Charakterentwicklung
-    - Plotkonstruktion
-
-24. Technical Documentation
-    - Standardisierte Dokumentation
-    - API-Beschreibungen
-    - Nutzerhandbücher
-
-25. Translation Enhancement
-    - Kontextbewahrung
-    - Kulturelle Anpassung
-    - Qualitätssicherung
-
-## F. Iterative Verbesserungstechniken
-
-26. Progressive Refinement
-    - Schrittweise Verfeinerung
-    - Feedback-Integration
-    - Kontinuierliche Optimierung
-
-27. Quality Assurance Loops
-    - Systematische Überprüfung
-    - Fehlererkennung
-    - Verbesserungszyklen
-
-28. Version Control Protocol
-    - Dokumentation von Änderungen
-    - Rückverfolgbarkeit
-    - Iterationsmanagement
-
-29. Feedback Integration
-    - Nutzer-Feedback-Verarbeitung
-    - Anpassung der Ausgaben
-    - Lernprozess
-
-30. Performance Optimization
-    - Effizienzsteigerung
-    - Ressourcenoptimierung
-    - Reaktionszeit-Verbesserung
-
-## G. Spezialisierte Analysetechniken
-
-31. Sentiment Analysis Protocol
-    - Emotionserkennung
-    - Stimmungsanalyse
-    - Kontextuelle Bewertung
-
-32. Pattern Recognition Framework
-    - Mustererkennung
-    - Trendanalyse
-    - Vorhersagemodelle
-
-33. Semantic Analysis
-    - Bedeutungsextraktion
-    - Kontextverständnis
-    - Textanalyse
-
-34. Topic Modeling
-    - Themenextraktion
-    - Kategorisierung
-    - Inhaltsstrukturierung
-
-35. Entity Recognition
-    - Namens- und Begriffserkennung
-    - Beziehungsanalyse
-    - Kontextuelle Einordnung
-
-## H. Dialogoptimierung
-
-36. Conversation Flow Management
-    - Dialogsteuerung
-    - Kontexterhaltung
-    - Natürlicher Gesprächsverlauf
-
-37. Question Refinement
-    - Präzisierung von Fragen
-    - Klärungsprozesse
-    - Verständnisoptimierung
-
-38. Response Calibration
-    - Antwortanpassung
-    - Tonalität
-    - Detailtiefe
-
-39. Context Memory
-    - Gesprächsverlauf-Tracking
-    - Referenzierung
-    - Kohärenz
-
-40. Interaction Patterns
-    - Dialogmuster
-    - Kommunikationsstrategien
-    - Benutzerführung
-
-## I. Validierungstechniken
-
-41. Fact-Checking Protocol
-    - Quellenüberprüfung
-    - Plausibilitätsprüfung
-    - Verifizierung
-
-42. Consistency Checking
-    - Logische Konsistenz
-    - Widerspruchsfreiheit
-    - Kohärenzprüfung
-
-43. Source Attribution
-    - Quellenangaben
-    - Referenzierung
-    - Nachvollziehbarkeit
-
-44. Verification Loops
-    - Systematische Überprüfung
-    - Validierungsschritte
-    - Qualitätskontrolle
-
-45. Cross-Reference Checking
-    - Querverweise
-    - Informationsvalidierung
-    - Konsistenzprüfung
-
-## J. Kreativitätssteuerung
-
-46. Imagination Protocols
-    - Kreative Ideengenerierung
-    - Innovationsförderung
-    - Originelle Lösungen
-
-47. Style Transfer
-    - Stilanpassung
-    - Tonalitätssteuerung
-    - Ausdrucksvariation
-
-48. Narrative Construction
-    - Geschichtenentwicklung
-    - Plotstrukturierung
-    - Charakterdesign
-
-49. Creative Problem-Solving
-    - Innovative Lösungsansätze
-    - Laterales Denken
-    - Perspektivwechsel
-
-50. Artistic Expression
-    - Künstlerische Gestaltung
-    - Ästhetische Optimierung
-    - Kreative Variation
-
-## K. Technische Optimierung
-
-51. Performance Tuning
-    - Reaktionszeit-Optimierung
-    - Ressourceneffizienz
-    - Systemleistung
-
-52. Memory Management
-    - Kontextspeicherung
-    - Informationsorganisation
-    - Referenzverwaltung
-
-53. Processing Pipeline
-    - Verarbeitungsschritte
-    - Workflow-Optimierung
-    - Effizienzsteigerung
-
-54. Error Handling
-    - Fehlerbehandlung
-    - Ausnahmemanagement
-    - Robustheit
-
-55. Output Formatting
-    - Ausgabeformatierung
-    - Darstellungsoptimierung
-    - Lesbarkeit
-
-## L. Domänenspezifische Techniken
-
-56. Scientific Writing
-    - Wissenschaftliche Methodik
-    - Fachsprache
-    - Präzision
-
-57. Legal Document Analysis
-    - Juristische Analyse
-    - Rechtliche Terminologie
-    - Compliance
-
-58. Medical Information Processing
-    - Medizinische Fachsprache
-    - Diagnostische Analysen
-    - Behandlungsprotokoll
-
-59. Financial Analysis
-    - Finanzielle Bewertung
-    - Wirtschaftliche Analyse
-    - Risikobeurteilung
-
-60. Technical Documentation
-    - Technische Beschreibung
-    - Spezifikation
-    - Implementierungsdetails
-
-## M. Qualitätssicherung
-
-61. Quality Metrics
-    - Qualitätsindikatoren
-    - Leistungsmessung
-    - Bewertungskriterien
-
-62. Review Process
-    - Überprüfungsverfahren
-    - Feedback-Integration
-    - Verbesserungsprozess
-
-63. Validation Framework
-    - Validierungsmethoden
-    - Qualitätsprüfung
-    - Standardkonformität
-
-64. Testing Protocol
-    - Testverfahren
-    - Fehleridentifikation
-    - Qualitätssicherung
-
-65. Documentation Standards
-    - Dokumentationsrichtlinien
-    - Standardisierung
-    - Nachvollziehbarkeit
-
-## N. Sicherheit und Ethik
-
-66. Ethical Guidelines
-    - Ethische Prinzipien
-    - Verantwortungsvolle KI
-    - Fairness
-
-67. Privacy Protection
-    - Datenschutz
-    - Vertraulichkeit
-    - Sicherheitsmaßnahmen
-
-68. Bias Prevention
-    - Vorurteilsvermeidung
-    - Fairness
-    - Ausgewogenheit
-
-69. Content Filtering
-    - Inhaltskontrolle
-    - Sicherheitsüberprüfung
-    - Qualitätsfilter
-
-70. Compliance Checking
-    - Regelkonformität
-    - Standardeinhaltung
-    - Gesetzeskonformität
-
-## O. Spezielle Anwendungsfälle
-
-71. Multi-Language Processing
-    - Mehrsprachige Verarbeitung
-    - Übersetzungsoptimierung
-    - Kulturelle Anpassung
-
-72. Time-Series Analysis
-    - Zeitreihenanalyse
-    - Trendvorhersage
-    - Entwicklungsprognose
-
-73. Image Description
-    - Bildanalyse
-    - Visuelle Beschreibung
-    - Kontextuelle Einordnung
-
-74. Audio Transcription
-    - Spracherkennung
-    - Transkription
-    - Audioanalyse
-
-75. Data Visualization
-    - Datenvisualisierung
-    - Grafische Darstellung
-    - Informationsdesign
-
-## P. Experimentelle Techniken
-
-76. Neural Symbolic Integration
-    - Symbolische Verarbeitung
-    - Neuronale Netze
-    - Hybride Ansätze
-
-77. Quantum-Inspired Processing
-    - Quantenalgorithmen
-    - Parallelverarbeitung
-    - Optimierungstechniken
-
-78. Emergent Behavior Analysis
-    - Emergente Muster
-    - Komplexitätsanalyse
-    - Systemverhalten
-
-79. Cognitive Architecture
-    - Kognitive Modelle
-    - Mentale Prozesse
-    - Denkstrukturen
-
-80. Evolutionary Algorithms
-    - Evolutionäre Optimierung
-    - Genetische Algorithmen
-    - Adaptives Lernen
-
-## Q. Zukunftsorientierte Methoden
-
-81. Predictive Analytics
-    - Vorhersagemodelle
-    - Trendanalyse
-    - Zukunftsprognosen
-
-82. Adaptive Learning
-    - Anpassungsfähigkeit
-    - Lernprozesse
-    - Optimierung
-
-83. Dynamic Optimization
-    - Dynamische Anpassung
-    - Leistungsoptimierung
-    - Ressourceneffizienz
-
-84. Real-Time Processing
-    - Echtzeitverarbeitung
-    - Schnelle Reaktion
-    - Aktuelle Anpassung
-
-85. Contextual Awareness
-    - Kontextverständnis
-    - Situationsbewusstsein
-    - Adaptive Reaktion
-
-## R. Integration und Schnittstellen
-
-86. API Integration
-    - Schnittstellendesign
-    - Systemintegration
-    - Datenaustausch
-
-87. Database Connectivity
-    - Datenbankanbindung
-    - Datenverwaltung
-    - Speicheroptimierung
-
-88. Service Architecture
-    - Servicedesign
-    - Systemarchitektur
-    - Modulare Struktur
-
-89. Protocol Implementation
-    - Kommunikationsprotokolle
-    - Standardisierung
-    - Interoperabilität
-
-90. System Integration
-    - Systemvernetzung
-    - Komponentenintegration
-    - Schnittstellenmanagement
-
-## S. Spezielle Optimierungstechniken
-
-91. Resource Management
-    - Ressourcenoptimierung
-    - Effizienzsteigerung
-    - Lastverteilung
-
-92. Performance Monitoring
-    - Leistungsüberwachung
-    - Systemanalyse
-    - Optimierungsmaßnahmen
-
-93. Load Balancing
-    - Lastausgleich
-    - Ressourcenverteilung
-    - Systemstabilität
-
-94. Caching Strategies
-    - Zwischenspeicherung
-    - Zugriffsoptimierung
-    - Leistungssteigerung
-
-95. Optimization Algorithms
-    - Optimierungsmethoden
-    - Effizienzsteigerung
-    - Leistungsverbesserung
-
-## T. Zukunftssicherung
-
-96. Version Management
-    - Versionskontrolle
-    - Änderungsverfolgung
-    - Entwicklungshist
+# 50 Effektive Prompting-Techniken für KI-Modelle
+
+## 1. Rollenbasierte Anweisungen
+1. "Agiere als erfahrener Projektmanager und analysiere folgendes Problem..."
+2. "Du bist ein detailverliebter technischer Dokumentator. Beschreibe..."
+3. "Nimm die Perspektive eines strengen Qualitätsprüfers ein und überprüfe..."
+4. "Verhalte dich wie ein kreativer Brainstorming-Partner und entwickle Ideen für..."
+5. "Als erfahrener Lehrer, erkläre mir Schritt für Schritt..."
+
+## 2. Strukturvorgaben
+6. "Erstelle eine Analyse in folgendem Format: Problem | Ursache | Lösung | Umsetzung"
+7. "Antworte in einer tabellarischen Übersicht mit den Spalten: Aspekt, Vor- und Nachteile"
+8. "Gliedere deine Antwort in: Einleitung, Hauptteil (3 Kernpunkte), Zusammenfassung"
+9. "Nutze folgende Struktur: These → Begründung → Beispiel → Schlussfolgerung"
+10. "Erstelle eine hierarchische Gliederung mit maximal 3 Ebenen zu..."
+
+## 3. Präzisionsanweisungen
+11. "Beschränke dich auf exakt 5 konkrete Handlungsempfehlungen"
+12. "Fasse das Konzept in genau 100 Wörtern zusammen"
+13. "Nenne die 3 wichtigsten Faktoren, geordnet nach Priorität"
+14. "Gib mir eine Schritt-für-Schritt-Anleitung mit maximal 7 Schritten"
+15. "Erkläre es so, dass es ein 12-jähriges Kind versteht"
+
+## 4. Iterative Verfeinerung
+16. "Lass uns dieses Konzept in 3 Schritten verfeinern. Beginne mit einer groben Übersicht"
+17. "Nachdem wir die Basis geklärt haben, lass uns tiefer in Aspekt X einsteigen"
+18. "Baue auf deiner vorherigen Antwort auf und erweitere sie um..."
+19. "Überarbeite den letzten Vorschlag unter Berücksichtigung von..."
+20. "Lass uns das schrittweise optimieren. Fokussieren wir uns zuerst auf..."
+
+## 5. Perspektivwechsel
+21. "Betrachte das Problem aus der Sicht eines Anfängers und eines Experten"
+22. "Analysiere die Situation aus technischer und aus wirtschaftlicher Perspektive"
+23. "Vergleiche die Vor- und Nachteile aus Sicht verschiedener Stakeholder"
+24. "Gib mir sowohl eine optimistische als auch eine pessimistische Einschätzung"
+25. "Zeige mir die kurzfristigen und langfristigen Konsequenzen auf"
+
+## 6. Qualitätssicherung
+26. "Prüfe deine Antwort auf logische Fehler und kennzeichne unsichere Aussagen"
+27. "Bewerte die Umsetzbarkeit deiner Vorschläge auf einer Skala von 1-5"
+28. "Nenne explizit die Annahmen, auf denen deine Analyse basiert"
+29. "Markiere kritische Punkte, die besondere Aufmerksamkeit erfordern"
+30. "Füge zu jedem Punkt ein konkretes Beispiel aus der Praxis hinzu"
+
+## 7. Kreativitätstechniken
+31. "Generiere 10 ungewöhnliche Lösungsansätze mittels Brainstorming"
+32. "Kombiniere zwei scheinbar unvereinbare Konzepte zu einer innovativen Lösung"
+33. "Wende das Prinzip der Umkehrung an: Was wäre der schlechteste Ansatz?"
+34. "Entwickle drei verschiedene Szenarien: Best Case, Worst Case, Most Likely"
+35. "Nutze die SCAMPER-Methode für die Ideenentwicklung"
+
+## 8. Entscheidungshilfen
+36. "Erstelle eine Entscheidungsmatrix mit gewichteten Kriterien"
+37. "Analysiere die Optionen nach dem Schema: Risiken | Chancen | Ressourcenbedarf"
+38. "Entwickle einen Entscheidungsbaum mit maximal 3 Verzweigungen"
+39. "Bewerte die Alternativen nach dem SWOT-Prinzip"
+40. "Erstelle eine Pro-Contra-Liste mit mindestens 5 Punkten je Seite"
+
+## 9. Kontextsteuerung
+41. "Berücksichtige bei deiner Antwort folgende Rahmenbedingungen..."
+42. "Gehe von einem begrenzten Budget von X Euro aus"
+43. "Orientiere dich an den Bedürfnissen einer mittelständischen Firma"
+44. "Beachte bei deinen Vorschlägen die aktuellen Markttrends in Branche X"
+45. "Beschränke dich auf Lösungen, die innerhalb von 3 Monaten umsetzbar sind"
+
+## 10. Formatierungsanweisungen
+46. "Nutze Aufzählungszeichen für die Hauptpunkte und Unteraufzählungen für Details"
+47. "Hebe wichtige Schlüsselbegriffe durch Fettdruck hervor"
+48. "Strukturiere die Antwort in kurze, leicht verständliche Absätze"
+49. "Füge nach jedem Hauptabschnitt eine kurze Zusammenfassung ein"
+50. "Verwende eine klare Hierarchie mit Überschriften und Unterüberschriften"

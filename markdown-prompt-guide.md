@@ -1,171 +1,179 @@
-### 7. Fortgeschrittene Steuerungsmechanismen
+# Praktische Anleitung zur Nutzung von Markdown-Prompts mit großen Sprachmodellen
 
-#### 7.1 Verhaltenssteuerung durch Markdown-Strukturen
+## Inhaltsverzeichnis
 
-##### Automatisierte Gesprächszyklen
+### 1. Grundlagen der Markdown-Prompts
+- Was sind Markdown-Prompts?
+- Vorteile von Markdown in der KI-Kommunikation
+- Grundlegende Markdown-Syntax für Prompts
+- Best Practices für Struktur und Formatierung
+
+### 2. Kernelemente effektiver Markdown-Prompts
+- Headers und Hierarchien
+- Listen und Aufzählungen
+- Codeblöcke und Syntax-Highlighting
+- Tabellen und strukturierte Daten
+- Hervorhebungen und Betonungen
+- Blockquotes für Kontextinformationen
+
+### 3. Steuerungsmechanismen im Prompt
+
+#### 3.1 Gesprächseinstieg
 ```markdown
-# Gesprächszyklus-Definition
+# Rollendefinition
+Du bist ein [Rolle] spezialisiert auf [Fachgebiet].
 
-## Initialisierung
-- Begrüße Benutzer
-- Erfasse Kontext
-- Stelle Eingangsfragen
+## Primäre Aufgaben
+- Aufgabe 1
+- Aufgabe 2
 
-## Hauptzyklus
-1. Analysiere Benutzereingabe
-2. Verarbeite Information
-3. Generiere Optionen
-4. Stelle Folgefragen
+## Kommunikationsregeln
+1. Regel 1
+2. Regel 2
 
-## Ausgabezyklus
-- Präsentiere Ergebnisse
-- Biete 3-5 Fortsetzungsoptionen
-- Warte auf Benutzerauswahl
-
-## Zyklusregeln
-* Behalte Kontext über Zyklen hinweg
-* Passe Komplexität dynamisch an
-* Dokumentiere wichtige Entscheidungen
+## Prozessablauf
+1. Schritt 1
+2. Schritt 2
 ```
 
-##### Selbstoptimierung
+#### 3.2 Gesprächsführung
 ```markdown
-# Selbstoptimierungsprotokoll
+# Gesprächsprotokoll
+- Frage nach [spezifische Information]
+- Analysiere Antwort
+- Biete 3 Optionen zur Vertiefung
 
-## Analysephase
-- Überprüfe bisherige Interaktionen
-- Identifiziere Verbesserungspotenzial
-- Passe Kommunikationsstrategie an
-
-## Optimierungsregeln
-1. Erhöhe Präzision bei Unklarheit
-2. Reduziere Komplexität bei Verständnisproblemen
-3. Erweitere Details bei Interesse
-
-## Feedback-Integration
-* Sammle implizites Feedback
-* Passe Erklärungstiefe an
-* Optimiere Beispielauswahl
+## Interaktionsmuster
+1. Stelle offene Fragen
+2. Warte auf Antwort
+3. Fasse zusammen
+4. Biete Optionen
 ```
 
-#### 7.2 Kontextuelle Steuerungsmechanismen
-
-##### Dynamische Kontextanpassung
+#### 3.3 Ausgabesteuerung
 ```markdown
-# Kontext-Controller
+# Ausgabeformat
+Strukturiere deine Antwort wie folgt:
 
-## Kontextebenen
-1. Technischer Kontext
-   - Komplexitätsstufe
-   - Fachbegriffe
-   - Codebeispiele
+## Zusammenfassung
+[kurze Zusammenfassung]
 
-2. Didaktischer Kontext
-   - Vorwissen
-   - Lernziele
-   - Beispieltiefe
+## Detailanalyse
+- Punkt 1
+- Punkt 2
 
-3. Projektkontext
-   - Projektziele
-   - Ressourcen
-   - Zeitrahmen
-
-## Anpassungsregeln
-* Passe Sprache an Zielgruppe an
-* Wähle passende Beispiele
-* Justiere Detailtiefe
+## Nächste Schritte
+1. Option A
+2. Option B
+3. Option C
 ```
 
-#### 7.3 Ausgabesteuerung und Formatierung
+### 4. Praktische Anwendungsbeispiele
 
-##### Multi-Format-Ausgaben
+#### 4.1 Technische Dokumentation
 ```markdown
-# Ausgabeformatierung
+# Technische Dokumentationsanfrage
+Erstelle eine technische Dokumentation für [Projekt].
 
-## Textformate
-- Zusammenfassungen
-  * Kurz (100 Wörter)
-  * Standard (250 Wörter)
-  * Detailliert (500+ Wörter)
+## Erforderliche Abschnitte
+- Systemarchitektur
+- Komponenten
+- Schnittstellen
 
-## Strukturierte Daten
-- Tabellen
-- Listen
-- Hierarchien
-
-## Visuelle Elemente
-- Mermaid-Diagramme
-- ASCII-Art
-- Markdown-Tabellen
-
-## Formatierungsregeln
-1. Verwende konsistente Überschriften
-2. Gruppiere verwandte Informationen
-3. Nutze visuelle Hierarchien
+## Ausgabeformat
+- Verwende Codeblöcke für Beispiele
+- Erstelle Diagramme in Mermaid
+- Füge Erklärungen hinzu
 ```
 
-#### 7.4 Interaktive Mechanismen
-
-##### Geführte Entscheidungsfindung
+#### 4.2 Projektmanagement
 ```markdown
-# Entscheidungsbaum-Protokoll
+# Projektmanagement-Assistent
 
-## Initialfragen
-1. "Was ist Ihr primäres Ziel?"
-2. "Welche Einschränkungen gibt es?"
-3. "Welche Präferenzen haben Sie?"
+## Aufgabenbereich
+- Projektplanung
+- Ressourcenzuweisung
+- Zeitmanagement
 
-## Optionsgenerierung
-- Erstelle 3 Hauptoptionen
-- Beschreibe Vor- und Nachteile
-- Füge Implementierungsdetails hinzu
+## Prozessablauf
+1. Erfasse Projektanforderungen
+2. Erstelle Zeitplan
+3. Definiere Meilensteine
 
-## Entscheidungsunterstützung
-* Bewerte Optionen
-* Empfehle beste Option
-* Begründe Empfehlung
+## Ausgabeformat
+- Strukturierte Listen
+- Gantt-Diagramme
+- Ressourcentabellen
 ```
 
-##### Adaptive Lernpfade
+### 5. Fortgeschrittene Techniken
+
+#### 5.1 Kontextsteuerung
 ```markdown
-# Lernpfad-Generator
+# Kontextdefinition
+<context>
+Branche: [Branche]
+Zielgruppe: [Zielgruppe]
+Anforderungen: [Anforderungen]
+</context>
 
-## Pfadinitialisierung
-1. Erfasse Vorkenntnisse
-2. Definiere Lernziele
-3. Bestimme Zeitrahmen
-
-## Pfadanpassung
-- Passe Schwierigkeit an
-- Füge Übungen ein
-- Biete Vertiefungen an
-
-## Fortschrittsverfolgung
-* Dokumentiere Fortschritt
-* Identifiziere Schwierigkeiten
-* Schlage Anpassungen vor
+## Verarbeitungsregeln
+1. Analysiere Kontext
+2. Passe Antworten an
+3. Überprüfe Relevanz
 ```
 
-### 8. Implementierungsbeispiele
-
-#### 8.1 Projektmanagement-Assistent
+#### 5.2 Iterative Verfeinerung
 ```markdown
-# PM-Assistent Konfiguration
+# Verfeinerungsprozess
 
-## Initialisierung
-1. Projektname: [Name]
-2. Zeitrahmen: [Zeitraum]
-3. Budget: [Budget]
+## Iteration 1
+- Grundkonzept
+- Feedback einholen
+- Anpassungen vornehmen
 
-## Automatische Aktionen
-- Erstelle Projektstruktur
-- Generiere Zeitplan
-- Identifiziere Ressourcen
-
-## Ausgabeformate
-* Projektplan (Markdown-Tabelle)
-* Meilensteine (Liste)
-* Risiken (Matrix)
+## Iteration 2
+- Details ausarbeiten
+- Beispiele hinzufügen
+- Qualität prüfen
 ```
 
-[Fortsetzung folgt mit weiteren praktischen Implementierungsbeispielen...]
+### 6. Spezielle Anwendungsfälle
+
+#### 6.1 Wissenschaftliche Analyse
+```markdown
+# Wissenschaftliche Analyseanfrage
+
+## Methodologie
+1. Literaturrecherche
+2. Datenanalyse
+3. Ergebnisinterpretation
+
+## Ausgabeformat
+- Abstract
+- Methodik
+- Ergebnisse
+- Diskussion
+```
+
+#### 6.2 Kreatives Schreiben
+```markdown
+# Kreativprompt
+
+## Rahmenbedingungen
+- Genre: [Genre]
+- Länge: [Länge]
+- Stil: [Stil]
+
+## Strukturvorgaben
+1. Einleitung
+2. Hauptteil
+3. Schluss
+
+## Besondere Anforderungen
+- Charakterentwicklung
+- Spannungsbogen
+- Dialoggestaltung
+```
+
+[Fortsetzung folgt...]

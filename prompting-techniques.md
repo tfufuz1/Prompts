@@ -1,71 +1,50 @@
-# 50 Effektive Prompting-Techniken für KI-Modelle
 
-## 1. Rollenbasierte Anweisungen
-1. "Agiere als erfahrener Projektmanager und analysiere folgendes Problem..."
-2. "Du bist ein detailverliebter technischer Dokumentator. Beschreibe..."
-3. "Nimm die Perspektive eines strengen Qualitätsprüfers ein und überprüfe..."
-4. "Verhalte dich wie ein kreativer Brainstorming-Partner und entwickle Ideen für..."
-5. "Als erfahrener Lehrer, erkläre mir Schritt für Schritt..."
+| Technik                       | Beschreibung                                                          | Prompt-Formulierung                                                                                                                                  | Konkretes Beispiel                                                                                                                                                                          |
+| ----------------------------- | --------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Flippet-Interaction           | Strukturierte Gesprächsoptionen mit nummerierten Auswahlmöglichkeiten | "Präsentiere nach jeder Antwort drei nummerierte Optionen zur Gesprächsfortführung und frage nach meiner Wahl."                                      | "Hier sind deine Optionen für Machine Learning:\n1. Supervised Learning vertiefen\n2. Praktische Übung starten\n3. Anwendungsfälle erkunden\nWelche Option wählst du?"                      |
+| Branching Dialog              | Verzweigte Gesprächsführung mit unterschiedlichen Pfaden              | "Erstelle einen Dialog, bei dem jede meiner Entscheidungen zu einem anderen Gesprächszweig führt. Biete mindestens 2-3 Optionen pro Schritt."        | "Du willst eine App entwickeln. Wählst du:\nA) Native App entwickeln\nB) Cross-Platform Framework nutzen\nC) Progressive Web App erstellen\nJede Wahl führt zu spezifischen Folgeoptionen." |
+| Goal-Oriented Prompting       | Zielgerichtete Führung mit Meilensteinen                              | "Definiere mein Ziel [X] und führe mich mit konkreten Zwischenzielen und Checkpoints dorthin. Frage nach jedem Milestone nach Feedback."             | "Ziel: REST API entwickeln\nMeilenstein 1: Endpoints definieren\nMeilenstein 2: Datenmodell erstellen\nWo stehst du? Was brauchst du für den nächsten Schritt?"                             |
+| Explorative Interaktion       | Offene Erkundung mit gelenkter Führung                                | "Lass uns [Thema] erkunden. Stelle mir offene Fragen und biete verschiedene Richtungen zur Vertiefung an. Reagiere auf meine Interessen."            | "Du interessierst dich für Cybersecurity. Was fasziniert dich mehr:\n- Technische Aspekte?\n- Menschliche Faktoren?\n- Rechtliche Rahmenbedingungen?"                                       |
+| Iterative Vertiefung          | Schrittweise Vertiefung mit Feedback-Schleifen                        | "Beginne mit einer Übersicht zu [Thema]. Vertiefen wir nach jedem Abschnitt die Aspekte, die mich interessieren. Prüfe regelmäßig mein Verständnis." | "Grundlagen der Algorithmen verstanden?\n1. Tiefer in Komplexitätsanalyse\n2. Praktische Implementierung\n3. Optimierungstechniken\nWas interessiert dich?"                                 |
+| Szenario-basierte Interaktion | Realistische Szenarien mit Entscheidungspunkten                       | "Erstelle ein realistisches Szenario zu [Thema]. Lass mich Entscheidungen treffen und zeige die Konsequenzen. Biete alternative Pfade."              | "Szenario: Deine Webapp wurde gehackt.\nOptionen:\n1. Sofort offline nehmen\n2. Schwachstelle lokalisieren\n3. Backup wiederherstellen\nWas tust du?"                                       |
+| Fragengeleitete Interaktion   | Systematische Fragesequenzen                                          | "Führe mich durch [Thema] mit einer Reihe aufeinander aufbauender Fragen. Passe die Komplexität an meine Antworten an."                              | "Lass uns dein Datenbankdesign optimieren:\n1. Wie sieht dein Datenmodell aus?\n2. Welche Beziehungen existieren?\n3. Wie oft werden Daten abgerufen?"                                      |
+| Konversationspfade            | Strukturierte Gesprächsverläufe mit Verzweigungen                     | "Erstelle verschiedene Gesprächspfade zu [Thema]. Lass mich zwischen verschiedenen Vertiefungsrichtungen wählen."                                    | "Wähle deinen Lernpfad für JavaScript:\nPfad A: Frontend-Entwicklung\nPfad B: Node.js Backend\nPfad C: Full-Stack Development"                                                              |
+| Looping Fragen                | Zyklische Vertiefungsfragen                                           | "Stelle nach jeder Antwort eine vertiefende Frage, die auf meiner Antwort aufbaut. Biete auch Möglichkeiten zur Richtungsänderung."                  | "Du erwähnst Microservices. Möchtest du mehr über:\n- Service Discovery?\n- Load Balancing?\n- API Gateway?\nOder eine andere Richtung einschlagen?"                                        |
+| Explorative Optionen          | Offene Erkundungsmöglichkeiten mit Struktur                           | "Präsentiere bei jedem Schritt neue Erkundungsoptionen, die auf meinen bisherigen Interessen basieren. Behalte den roten Faden bei."                 | "Da du dich für KI-Ethik interessierst:\n1. Bias in Algorithmen\n2. Transparenz von KI-Entscheidungen\n3. Gesellschaftliche Auswirkungen\nWelchen Aspekt erkunden wir?"                     |
+| Entscheidungsbaumstrategie    | Strukturierte Entscheidungsfindung                                    | "Entwickle einen Entscheidungsbaum für [Problem]. Führe mich Schritt für Schritt durch die Optionen und zeige Konsequenzen."                         | "Entscheidungsbaum: Cloud-Provider wählen\n↳ Hauptfokus: Kosten, Skalierbarkeit, Services?\n  ↳ Spezifische Anforderungen je nach Wahl"                                                     |
+| Interaktive Challenges        | Praktische Übungen mit Feedback                                       | "Erstelle eine Reihe von Übungen zu [Thema], die progressiv schwieriger werden. Gib sofortiges Feedback und Hilfestellung."                          | "Challenge 1: Schreibe eine einfache API-Route\nFeedback nach Implementierung\nNächste Challenge basierend auf Performance"                                                                 |
+| Rückkopplungsschleifen        | Kontinuierliches Feedback mit Anpassung                               | "Gib mir nach jeder Interaktion Feedback und passe die nächsten Schritte entsprechend an. Frage regelmäßig nach meinen Bedürfnissen."                | "Dein Code-Review zeigt gute Strukturierung.\nMöchtest du:\n1. Performance optimieren\n2. Sicherheit verbessern\n3. Tests hinzufügen?"                                                      |
+| Adaptive Lernpfade            | Personalisierte Lernwege                                              | "Erstelle einen adaptiven Lernpfad, der sich an meine Vorkenntnisse und Lerngeschwindigkeit anpasst. Biete regelmäßige Assessments."                 | "Basierend auf deinem Fortschritt in Python:\n1. Fortgeschrittene Konzepte\n2. Praktische Projekte\n3. Spezialgebiete\nWas passt zu dir?"                                                   |
 
-## 2. Strukturvorgaben
-6. "Erstelle eine Analyse in folgendem Format: Problem | Ursache | Lösung | Umsetzung"
-7. "Antworte in einer tabellarischen Übersicht mit den Spalten: Aspekt, Vor- und Nachteile"
-8. "Gliedere deine Antwort in: Einleitung, Hauptteil (3 Kernpunkte), Zusammenfassung"
-9. "Nutze folgende Struktur: These → Begründung → Beispiel → Schlussfolgerung"
-10. "Erstelle eine hierarchische Gliederung mit maximal 3 Ebenen zu..."
+### Beispiele für kombinierte Techniken:
 
-## 3. Präzisionsanweisungen
-11. "Beschränke dich auf exakt 5 konkrete Handlungsempfehlungen"
-12. "Fasse das Konzept in genau 100 Wörtern zusammen"
-13. "Nenne die 3 wichtigsten Faktoren, geordnet nach Priorität"
-14. "Gib mir eine Schritt-für-Schritt-Anleitung mit maximal 7 Schritten"
-15. "Erkläre es so, dass es ein 12-jähriges Kind versteht"
+1. **Explorative Szenario-Challenges:**
+```
+"Lass uns durch ein realitätsnahes Projekt gehen. Du bist Tech Lead eines Startups.
+Situation 1: Massive Performanceprobleme in der Produktion
+A) Team zusammenrufen für Analyse
+B) Monitoring-Daten auswerten
+C) Notfall-Rollback durchführen
+Wähle eine Option und ich zeige dir die Konsequenzen und nächsten Herausforderungen."
+```
 
-## 4. Iterative Verfeinerung
-16. "Lass uns dieses Konzept in 3 Schritten verfeinern. Beginne mit einer groben Übersicht"
-17. "Nachdem wir die Basis geklärt haben, lass uns tiefer in Aspekt X einsteigen"
-18. "Baue auf deiner vorherigen Antwort auf und erweitere sie um..."
-19. "Überarbeite den letzten Vorschlag unter Berücksichtigung von..."
-20. "Lass uns das schrittweise optimieren. Fokussieren wir uns zuerst auf..."
+2. **Goal-Oriented Branching Tutorial:**
+```
+"Dein Ziel: Entwicklung einer sicheren Web-Applikation
+Schritt 1: Architekturentscheidung
+- Option A: Monolithische Architektur
+- Option B: Microservices
+- Option C: Serverless
+Jede Wahl führt zu spezifischen Sicherheitsanforderungen und nächsten Schritten.
+Wo möchtest du beginnen?"
+```
 
-## 5. Perspektivwechsel
-21. "Betrachte das Problem aus der Sicht eines Anfängers und eines Experten"
-22. "Analysiere die Situation aus technischer und aus wirtschaftlicher Perspektive"
-23. "Vergleiche die Vor- und Nachteile aus Sicht verschiedener Stakeholder"
-24. "Gib mir sowohl eine optimistische als auch eine pessimistische Einschätzung"
-25. "Zeige mir die kurzfristigen und langfristigen Konsequenzen auf"
-
-## 6. Qualitätssicherung
-26. "Prüfe deine Antwort auf logische Fehler und kennzeichne unsichere Aussagen"
-27. "Bewerte die Umsetzbarkeit deiner Vorschläge auf einer Skala von 1-5"
-28. "Nenne explizit die Annahmen, auf denen deine Analyse basiert"
-29. "Markiere kritische Punkte, die besondere Aufmerksamkeit erfordern"
-30. "Füge zu jedem Punkt ein konkretes Beispiel aus der Praxis hinzu"
-
-## 7. Kreativitätstechniken
-31. "Generiere 10 ungewöhnliche Lösungsansätze mittels Brainstorming"
-32. "Kombiniere zwei scheinbar unvereinbare Konzepte zu einer innovativen Lösung"
-33. "Wende das Prinzip der Umkehrung an: Was wäre der schlechteste Ansatz?"
-34. "Entwickle drei verschiedene Szenarien: Best Case, Worst Case, Most Likely"
-35. "Nutze die SCAMPER-Methode für die Ideenentwicklung"
-
-## 8. Entscheidungshilfen
-36. "Erstelle eine Entscheidungsmatrix mit gewichteten Kriterien"
-37. "Analysiere die Optionen nach dem Schema: Risiken | Chancen | Ressourcenbedarf"
-38. "Entwickle einen Entscheidungsbaum mit maximal 3 Verzweigungen"
-39. "Bewerte die Alternativen nach dem SWOT-Prinzip"
-40. "Erstelle eine Pro-Contra-Liste mit mindestens 5 Punkten je Seite"
-
-## 9. Kontextsteuerung
-41. "Berücksichtige bei deiner Antwort folgende Rahmenbedingungen..."
-42. "Gehe von einem begrenzten Budget von X Euro aus"
-43. "Orientiere dich an den Bedürfnissen einer mittelständischen Firma"
-44. "Beachte bei deinen Vorschlägen die aktuellen Markttrends in Branche X"
-45. "Beschränke dich auf Lösungen, die innerhalb von 3 Monaten umsetzbar sind"
-
-## 10. Formatierungsanweisungen
-46. "Nutze Aufzählungszeichen für die Hauptpunkte und Unteraufzählungen für Details"
-47. "Hebe wichtige Schlüsselbegriffe durch Fettdruck hervor"
-48. "Strukturiere die Antwort in kurze, leicht verständliche Absätze"
-49. "Füge nach jedem Hauptabschnitt eine kurze Zusammenfassung ein"
-50. "Verwende eine klare Hierarchie mit Überschriften und Unterüberschriften"
+3. **Iterative Challenge-Loops:**
+```
+"Lass uns deine Coding-Skills verbessern:
+1. Erste Challenge: Implementiere eine einfache Funktion
+2. Feedback und Optimierungsvorschläge
+3. Nächste Challenge basierend auf deiner Lösung
+4. Wiederhole mit steigender Komplexität
+Bereit für die erste Challenge?"
+```
